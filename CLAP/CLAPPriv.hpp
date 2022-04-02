@@ -13,7 +13,7 @@
 class CLAPPriv
 {
     public:
-    void HelloWorldPriv(const char *);
+    //void HelloWorldPriv(const char *);
     
     static std::string GetParameterMandatoryString(const bool isMandatory)
     {

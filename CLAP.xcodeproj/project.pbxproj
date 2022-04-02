@@ -7,16 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D92774627DE6255001F2A3C /* ClapErrors.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 9D92774527DE6255001F2A3C /* ClapErrors.hpp */; };
 		9D94C39A27DBDFC7005AA462 /* CLAP.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 9D94C39927DBDFC7005AA462 /* CLAP.hpp */; };
 		9D94C39C27DBDFC7005AA462 /* CLAPPriv.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 9D94C39B27DBDFC7005AA462 /* CLAPPriv.hpp */; };
 		9D94C39E27DBDFC7005AA462 /* CLAP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9D94C39D27DBDFC7005AA462 /* CLAP.cpp */; };
+		9DB8821A27F84756004BDA90 /* ClapErrors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9DB8821927F84756004BDA90 /* ClapErrors.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9D92774527DE6255001F2A3C /* ClapErrors.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ClapErrors.hpp; sourceTree = "<group>"; };
 		9D94C39627DBDFC6005AA462 /* libCLAP.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libCLAP.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D94C39927DBDFC7005AA462 /* CLAP.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CLAP.hpp; sourceTree = "<group>"; };
 		9D94C39B27DBDFC7005AA462 /* CLAPPriv.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CLAPPriv.hpp; sourceTree = "<group>"; };
 		9D94C39D27DBDFC7005AA462 /* CLAP.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CLAP.cpp; sourceTree = "<group>"; };
+		9DB8821927F84756004BDA90 /* ClapErrors.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ClapErrors.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +53,8 @@
 		9D94C39827DBDFC6005AA462 /* CLAP */ = {
 			isa = PBXGroup;
 			children = (
+				9D92774527DE6255001F2A3C /* ClapErrors.hpp */,
+				9DB8821927F84756004BDA90 /* ClapErrors.cpp */,
 				9D94C39927DBDFC7005AA462 /* CLAP.hpp */,
 				9D94C39B27DBDFC7005AA462 /* CLAPPriv.hpp */,
 				9D94C39D27DBDFC7005AA462 /* CLAP.cpp */,
@@ -63,6 +69,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D92774627DE6255001F2A3C /* ClapErrors.hpp in Headers */,
 				9D94C39A27DBDFC7005AA462 /* CLAP.hpp in Headers */,
 				9D94C39C27DBDFC7005AA462 /* CLAPPriv.hpp in Headers */,
 			);
@@ -125,6 +132,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DB8821A27F84756004BDA90 /* ClapErrors.cpp in Sources */,
 				9D94C39E27DBDFC7005AA462 /* CLAP.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

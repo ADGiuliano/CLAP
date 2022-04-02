@@ -9,17 +9,42 @@
 #include "CLAP.hpp"
 #include "CLAPPriv.hpp"
 
-void CLAP::HelloWorld(const char * s)
-{
-    CLAPPriv *theObj = new CLAPPriv;
-    theObj->HelloWorldPriv(s);
-    delete theObj;
-};
+//void CLAP::HelloWorld(const char * s)
+//{
+//    CLAPPriv *theObj = new CLAPPriv;
+//    theObj->HelloWorldPriv(s);
+//    delete theObj;
+//};
 
-void CLAPPriv::HelloWorldPriv(const char * s) 
+//void CLAPPriv::HelloWorldPriv(const char * s)
+//{
+//    std::cout << s << std::endl;
+//};
+
+bool CLAP::AddParameter(const std::string &parName,
+                        const std::string &parShortName,
+                        const std::string &parDescription,
+                        const bool isMandatory,
+                        const std::string &parDefValue)
 {
-    std::cout << s << std::endl;
-};
+    ArgumentName argName = {
+        .name = parName,
+        .shortName = parShortName };
+    
+    // Duplicate parameter check
+//    if (_argumentMap.find(argName) != _argumentMap.end())
+//    {
+//        return (_lastError = ClapErrors::CLAP_ERRORS::REPEATED_PARAMETER);
+//    }     TODO: TO FIX
+    
+//    _argumentMap.insert(std::make_pair(argName,
+//                                       ArgumentValue{.argDescription = parDescription,
+//                                                .isMandatory = isMandatory,
+//                                                .argValue = parDefValue})); TODO: TO FIX
+    
+    
+    return (GetLatError() == CLAP_ERRORS::NO_ERROR);
+}
 
 
 void CLAP::Description() const

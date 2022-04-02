@@ -15,6 +15,8 @@
 #include <set>
 #include <map>
 
+#include "ClapErrors.hpp"
+
 struct ArgumentValue
 {
     std::string argValue;
@@ -28,7 +30,7 @@ struct ArgumentName
     std::string shortName;
 };
 
-class CLAP
+class CLAP : public ClapsError
 {
     std::map<ArgumentName, ArgumentValue> _argumentMap;
     std::set<ArgumentName> _mandatoryArgsSet;
@@ -36,14 +38,25 @@ class CLAP
     public:
     
     // Clap Class Costructor
-    CLAP(const char *arg, const unsigned int argv);
+    CLAP()
+    : ClapsError()
+    {}
     
-    void HelloWorld(const char * s);
+    //void HelloWorld(const char * s);
     
     bool AreMandatoryArgsPresent()
     {
         return _mandatoryArgsSet.empty();
     }
+    
+    
+    bool AddParameter(const std::string &parName,
+                      const std::string &parShortName,
+                      const std::string &parDescription,
+                      const bool isMandatory = false,
+                      const std::string &parDefValue = std::string(""));
+    
+    bool Validate() const;
     
     // Print the parameter's list and descriptions
     void Description() const;
